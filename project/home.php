@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $con=mysqli_connect("localhost","root","","DBMSdata");
+  $con=mysqli_connect("localhost","root","yash18121998yadav","new");
 // Check connection
   if (mysqli_connect_errno())
   {
@@ -14,9 +14,9 @@
 $result=$con->query("select * from DBMSdata");
 
     $i=1;
- 
+
       $j=1;
-    
+
     while($row_brand=mysqli_fetch_array($result))
     {
         $brand_image = $row_brand["Picture"];
@@ -31,11 +31,11 @@ $result=$con->query("select * from DBMSdata");
 
         $search=$_POST['search'];
 
-        $_SESSION['search'] = $search; 
-     
+        $_SESSION['search'] = $search;
+
         header("Location: search1.php");
 
-          
+
     }
 
     /*function passp($var1){
@@ -44,7 +44,7 @@ $result=$con->query("select * from DBMSdata");
         header("Location: chk.php");
     }
     */
-                  
+
 ?>
 <!Doctype html>
 <html>
@@ -58,7 +58,7 @@ $result=$con->query("select * from DBMSdata");
             }
           </script> -->
           <style type="text/css">
-      
+
 
           .full {
     background: url(background.jpg) no-repeat center center fixed;
@@ -85,7 +85,7 @@ $result=$con->query("select * from DBMSdata");
       <li class="nav-item active">
         <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
       </li>
-     
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Genres
@@ -162,7 +162,7 @@ $result=$con->query("select * from DBMSdata");
 
 
         <?php
-        for ($k = 1; ;  ){ 
+        for ($k = 1; ;  ){
               if($j==$i){
                       break;
                     }
@@ -173,7 +173,7 @@ $result=$con->query("select * from DBMSdata");
             <div class="card-deck container mb-3 mt-3">
 
                 <?php
-                  for ($l = 1; $l<=5; $l++){ 
+                  for ($l = 1; $l<=5; $l++){
                     if($j==$i){
                       break;
                     }
@@ -181,10 +181,10 @@ $result=$con->query("select * from DBMSdata");
                       <div class="card ">
 
                            <a href="chk.php?id=<?php echo $j ?>">
-                             <?php echo $image_data[$j];                             
+                             <?php echo $image_data[$j];
                              $j++;
                              ?>
-                          </a> 
+                          </a>
                       </div>
                     <?php } ?>
             </div>
