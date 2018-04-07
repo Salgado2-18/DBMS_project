@@ -76,8 +76,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body background :"backgroun.jpg">
-  <div class="jumbotron heading">
-  <h1 class="" >fILM<br>fACTORY</h1>
+
   </div>
 <div class="cont_centrar">
 
@@ -154,5 +153,12 @@ if (isset($_POST['submit'])) {
 
 
 </body>
-
+<footer>
+  <div style="position:absolute; bottom: 5px; width:100%;">
+  <div style="width:100%;">
+  <div style="width:736px; background-color: rgba(120, 144, 156, 0.8); float:left;padding: 30px 80px; color: #000;"><h1 >fILM<br>fACTORY</h1></div>
+  <div style="width:310px; background-color: rgba(237, 95, 7, 0.8); float:right; padding: 30px 80px; color: #000;"><h1 >DBMS<br>Project</h1></div>
+  </div>
+  </div>
+</footer>
 </html>
